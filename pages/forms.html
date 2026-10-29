@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../styles/style.css" />
+    <title>Створення рецепту</title>
+  </head>
+  <body>
+    <header>
+      <nav id="navigation">
+        <ul class="nav-list">
+          <li><a href="../index.html">Основна сторінка</a></li>
+          <li><a href="#info">Основна інформація про страву</a></li>
+          <li><a href="#seasonality-legend">Сезонність блюда</a></li>
+          <li><a href="#nutritional">Харчова цінність та характеристики</a></li>
+          <li><a href="#recipe-legend">Рецепт</a></li>
+          <li><a href="#planning">Планування та час</a></li>
+          <li><a href="#author-data">Дані автора</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section>
+        <h1>Форма створення рецепту</h1>
+        <form>
+          <fieldset>
+            <legend id="info">Основна інформація про страву:</legend>
+            <label for="recipe-name">Назва рецепта:</label>
+            <input
+              type="text"
+              id="recipe-name"
+              name="name"
+              placeholder="Пиріжки з капустою"
+            />
+            <label for="cuisine">Кухня світу:</label>
+            <select id="cuisine" name="cuisine">
+              <option value="">-- Оберіть кухню --</option>
+              <option value="ukrainian">Українська</option>
+              <option value="italian">Італійська</option>
+              <option value="japanese">Японська</option>
+              <option value="french">Французька</option>
+              <option value="mexican">Мексиканська</option>
+              <option value="georgian">Грузинська</option>
+              <option value="other">Інша</option>
+            </select>
+            <label for="photo">Фото страви:</label>
+            <input type="file" id="photo" name="photo" accept="image/*" />
+            <label for="recipe-video">Посилання на відео-рецепт:</label>
+            <input
+              type="url"
+              id="recipe-video"
+              name="recipe-video"
+              placeholder="https://apple.com"
+              pattern="https://.*"
+            />
+          </fieldset>
+          <fieldset>
+            <legend id="seasonality-legend">Сезонність блюда:</legend>
+            <input
+              type="month"
+              id="seasonality-form"
+              name="seasonality"
+              min="2026-01"
+              max="2026-12"
+            />
+          </fieldset>
+          <fieldset>
+            <legend id="nutritional">
+              Харчова цінність та характеристики:
+            </legend>
+            <label for="calories">Калорії:</label>
+            <input
+              type="number"
+              id="calories"
+              name="calories"
+              placeholder="1234"
+            />
+            <fieldset>
+              <legend>Категорія страви:</legend>
+              <label>
+                <input
+                  type="radio"
+                  name="category"
+                  value="breakfast"
+                />Сніданок</label
+              >
+              <label>
+                <input type="radio" name="category" value="dinner" />Обід</label
+              >
+              <label>
+                <input
+                  type="radio"
+                  name="category"
+                  value="lunch"
+                />Вечеря</label
+              >
+              <label>
+                <input
+                  type="radio"
+                  name="category"
+                  value="baked"
+                />Випічка</label
+              >
+              <label>
+                <input
+                  type="radio"
+                  name="category"
+                  value="desert"
+                />Десерт</label
+              >
+            </fieldset>
+            <fieldset>
+              <legend>Особливості:</legend>
+              <label
+                ><input name="sugarfree" type="checkbox" value="sugarfree" />Без
+                цукру</label
+              >
+              <label
+                ><input
+                  name="freezable"
+                  type="checkbox"
+                  value="freezable"
+                />Підходить для заморозки</label
+              >
+            </fieldset>
+            <label for="level">Рівень складності:</label>
+            <input
+              type="range"
+              id="level"
+              name="level"
+              min="1"
+              max="10"
+              value="1"
+            />
+          </fieldset>
+          <fieldset>
+            <legend id="recipe-legend">Рецепт:</legend>
+            <textarea
+              id="recipe-form"
+              name="recipe-form"
+              rows="5"
+              cols="50"
+              placeholder="Повний рецепт для приготування страви..."
+            ></textarea>
+          </fieldset>
+          <fieldset>
+            <legend id="planning">Планування та час:</legend>
+            <label for="publish-time"
+              >Дата запланованої публікації рецепта:</label
+            >
+            <input type="date" id="publish-time" name="publish-time" />
+            <label for="cooking-time"
+              >Час запланованої публікації рецепта:</label
+            >
+            <input type="time" id="cooking-time" name="cooking-time" />
+          </fieldset>
+          <fieldset>
+            <legend id="author-data">Дані автора:</legend>
+            <label for="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="tasty@gmail.com"
+            />
+            <label for="tel">Номер телефону:</label>
+            <input
+              type="tel"
+              id="tel"
+              name="tel"
+              placeholder="+38 (069) 696 69 69"
+            />
+          </fieldset>
+          <button type="submit" id="submit">Створити рецепт</button>
+          <button type="reset" id="reset">Скинути форму</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <a href="#navigation">Повернутися до навігації</a>
+      <p>&copy; 2026 Сунко Дмитро</p>
+    </footer>
+  </body>
+</html>

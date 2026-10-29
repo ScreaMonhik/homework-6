@@ -1,0 +1,264 @@
+:root {
+  --main-text-color: #4a3e3d;
+  --accent-color: #9a3412;
+  --border-color: #fed7aa;
+}
+
+body {
+  background:
+    url("../images/food-pattern.webp") repeat,
+    linear-gradient(135deg, #fff7ed, #ffedd5);
+  background-attachment: fixed;
+  color: var(--main-text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  color: #7c2d12;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background-color: bisque;
+  border: 5px solid var(--border-color);
+}
+
+h1,
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+nav > ul {
+  list-style: none;
+}
+
+.nav-list li {
+  background-image: url("../images/nav-list-icon.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  padding-left: 25px;
+}
+
+/* Цей селектор має найбільшу специфічність - (1, 2, 1): */
+#navigation .nav-list a:hover {
+  color: #7c2d12;
+}
+
+main > section {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 247, 237, 0.9),
+    rgba(255, 237, 213, 0.9)
+  );
+  border: 5px solid var(--border-color);
+}
+
+h2 {
+  text-decoration: underline;
+}
+
+h2::before {
+  content: "★ ";
+  color: var(--accent-color);
+}
+
+h2::after {
+  content: " ★";
+  color: var(--accent-color);
+}
+
+h3 {
+  color: var(--accent-color);
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: calc(24 / 20);
+}
+
+.subtitle {
+  color: var(--main-text-color);
+  font-size: 20px;
+  font-weight: 700;
+  font-style: italic;
+  line-height: calc(24 / 20);
+}
+
+.list li {
+  background-image: url("../images/pan.png");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  padding-left: 25px;
+}
+
+ol li:first-child {
+  font-weight: 700;
+}
+
+ol li:last-child {
+  color: var(--accent-color);
+}
+
+ol li:nth-child(even) {
+  font-style: italic;
+}
+
+form fieldset {
+  border: 2px solid var(--border-color);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+fieldset legend {
+  color: var(--accent-color);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+label + input,
+label + select,
+label + textarea {
+  border: 1px solid var(--border-color);
+}
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: var(--accent-color);
+  background-color: #fffaf0;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid var(--accent-color);
+  background-color: #fffaf0;
+}
+
+input[type="file"] {
+  background-color: #fffaf0;
+  border: 1px dashed var(--accent-color);
+  color: var(--main-text-color);
+  font-weight: 700;
+}
+
+input[type="file"]:hover {
+  background-color: bisque;
+  border-style: solid;
+}
+
+input[type="file"]:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+input[type="date"],
+input[type="month"],
+input[type="time"] {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  color: var(--main-text-color);
+}
+
+input[type="date"]:hover,
+input[type="month"]:hover,
+input[type="time"]:hover {
+  border-color: var(--accent-color);
+  background-color: #fffaf0;
+}
+
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus {
+  outline: none;
+  border: 2px solid var(--accent-color);
+  background-color: #ffffff;
+}
+
+fieldset label:hover {
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+input[type="checkbox"]:hover,
+input[type="radio"]:hover {
+  outline: 2px solid var(--accent-color);
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  accent-color: var(--accent-color);
+}
+
+input[type="range"] {
+  accent-color: var(--accent-color);
+}
+
+input[type="range"]:hover {
+  outline: 2px solid var(--border-color);
+}
+
+input[type="range"]:focus {
+  outline: 2px solid var(--accent-color);
+}
+
+button[type="submit"],
+button[type="reset"] {
+  background-color: var(--accent-color);
+  color: white;
+  border: 2px solid var(--accent-color);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover,
+button[type="submit"]:focus,
+button[type="reset"]:focus {
+  background-color: bisque;
+  color: var(--accent-color);
+  outline: none;
+}
+
+button + button {
+  border-color: brown;
+}
+
+footer {
+  text-align: center;
+  background-color: bisque;
+  border: 5px solid var(--border-color);
+}
+
+.footer-link {
+  color: var(--main-text-color);
+  border: 5px solid brown;
+}
+
+.footer-link::first-letter {
+  font-size: 150%;
+  color: var(--accent-color);
+}
+
+.footer-link::first-line {
+  font-weight: 700;
+}
